@@ -1,0 +1,109 @@
+    .btn {
+        position: absolute;
+        left: 78%;
+        top: -90%;
+    }
+    
+    .negro {
+        background: black;
+    }
+    
+    .navbar {
+        padding-left: calc(50% - 49.5px);
+    }
+    
+    .card-titulo {
+        font-size: 2.0em;
+        font-family: Arial;
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+        color: #000000;
+        transition: none 0s ease 0s;
+        cursor: move;
+        position: relative;
+        top: -6px;
+    }
+    
+    .card-nohay {
+        font-size: 1.0em;
+        font-family: Arial;
+        text-align: center;
+        width: 100%;
+        font-weight: lighter;
+        color: #000000;
+        transition: none 0s ease 0s;
+        cursor: move;
+        position: relative;
+        top: 1px;
+    }
+    
+    .card-dni {
+        position: absolute;
+        font-size: 1em;
+        width: 100%;
+        font-weight: bold;
+        color: #000000;
+    }
+    
+    .chip {
+        -ms-grid-row-align: center;
+    }
+    
+    .Button {
+        background-color: white;
+        border: 1px;
+        border-block-color: black;
+        font-family: Arial;
+        font-style: bold;
+    }
+    
+    .Bordes {
+        padding: 0%;
+        text-align: center;
+    }
+    
+    .background-image {
+        --background: url('../../../assets/gym_1.jpg') no-repeat 100% 100%;
+        background-color: black;
+        padding: 0%;
+        padding-bottom: 0 !important;
+        height: 100% auto !important;
+        background-repeat: no-repeat;
+        background-image: cover !important;
+        background-size: cover !important;
+        background-position: center;
+        position: fixed;
+    }
+    
+    .bg {
+        padding-bottom: 0 !important;
+        background-image: url('../../../assets/gym_1.jpg') !important;
+        background-color: black;
+        height: 100% auto !important;
+        // width: 100% !important;
+        background-repeat: no-repeat;
+        background-image: cover !important;
+        background-size: cover !important;
+        background-position: center;
+        position: fixed;
+    }
+    
+    .carta {
+        display: inline;
+    }
+    
+    .columna-centro {
+        text-align: center;
+        padding-top: 0%;
+    }
+    
+    .card-header {
+        padding-bottom: 0%;
+    }
+    
+    .camara {
+        position: relative;
+        top: -56px;
+        left: 227px;
+    }

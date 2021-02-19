@@ -1,0 +1,102 @@
+<ion-content class="background-image">
+    <ion-header no-border="no-border">
+        <ion-toolbar color="dark">
+            <ion-buttons slot="start" color="dark">
+                <img src="../../../assets/icon/logoGym.ico" alt="">
+            </ion-buttons>
+
+
+            <ion-title>Ingreso de Socios</ion-title>
+            <ion-buttons slot="end">
+                <ion-button (click)="logout()" color="primary">
+                    <ion-icon slot="icon-only" name="exit"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+
+    </ion-header>
+
+
+    <!-- HEADER END -->
+    <div>
+        <ion-toolbar color="dark">
+            <ion-searchbar #mySearchbar [(ngModel)]="myInput" inputmode="numeric" placeholder="DNI" animated="animated" (ionClear)="limpiar()" (search)="buscar( $event.target.value )"></ion-searchbar>
+
+        </ion-toolbar>
+
+        <!-- TOOLBAR END -->
+    </div>
+
+
+
+
+    <ng-container *ngIf="noencuentra">"
+        <ion-card color="light">
+            <ion-card-header>
+                <ion-card-title class="card-nohay">
+                    No se encontraron resultados :(
+
+
+
+                </ion-card-title>
+            </ion-card-header>
+        </ion-card>
+    </ng-container>
+
+    <ion-grid fixed="fixed" class="Bordes">
+        <ion-row>
+            <ion-col size="12" *ngFor="let cliente of clientes">
+
+                <ion-grid>
+
+
+                    <ion-card mode="md" color="light" style="--top:127.4px; --left:20px;">
+                        <ion-img [src]="cliente.fotoUrl"></ion-img>
+                        <ion-card-header class="card-header">
+                            <ion-col size="4" class="btn">
+                                <ion-fab-button class="padding-right" color="light" (click)="camara()">
+                                    <ion-icon name="camera"></ion-icon>
+                                </ion-fab-button>
+
+                            </ion-col>
+
+
+                            <ion-card-title class="card-titulo">{{cliente.nombre}} {{cliente.apellido}}</ion-card-title>
+
+                        </ion-card-header>
+
+
+                        <div>{{cliente.dni}}</div>
+
+
+                        <ion-card-content class="carta">
+
+                            <ng-container *ngIf="cliente.debeCuota; else elseTemplate">
+                                <ion-chip class="chip" color="danger">
+                                    <ion-label>Debe cuota</ion-label>
+                                </ion-chip>
+                            </ng-container>
+                            <ng-template #elseTemplate>
+                                <ion-chip class="chip" color="secondary">
+                                    <ion-label>No debe cuota</ion-label>
+                                </ion-chip>
+                            </ng-template>
+
+                        </ion-card-content>
+
+
+
+                    </ion-card>
+
+                </ion-grid>
+
+                <ion-button color="primary" expand="full" class="Button" (click)="registrarIngreso()">Registrar ingreso</ion-button>
+
+
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+
+</ion-content>
